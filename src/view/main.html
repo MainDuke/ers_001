@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Easy Restful Sender</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+</head>
+<body>
+<h1>Easy Restful Sender</h1>
+
+We are using node <script>document.write(process.versions.node)</script>,
+Chrome <script>document.write(process.versions.chrome)</script>,
+and Electron <script>document.write(process.versions.electron)</script>.
+
+<h3>
+    Making HTTP REST API Calls
+    using net Module in Electron
+</h3>
+
+
+<div id="input_area">
+    <table>
+        <tr>
+            <td><p>Requset Target Setting</p></td>
+        </tr>
+        <tr>
+            <td><label>input_method</label></td>
+            <td><input type="text" id="input_method" placeholder="default=POST"/><br></td>
+        </tr>
+        <tr>
+            <td><label>input_url</label></td>
+            <td><input type="text" id="input_url" placeholder="default=121.160.17.87" /><br></td>
+        </tr>
+
+            <tr>
+                <td><label>input_protocol</label></td>
+                <td><input type="text" id="input_protocol" placeholder="default=http"/><br></td>
+            </tr>
+            <tr>
+                <td><label>input_hostname</label></td>
+                <td><input type="text" id="input_hostname" placeholder="default=121.160.17.87"/><br></td>
+            </tr>
+            <tr>
+                <td><label>input_port</label></td>
+                <td><input type="text" id="input_port" placeholder="default=13000"/><br></td>
+            </tr>
+            <tr>
+                <td><label>input_path</label></td>
+                <td><input type="text" id="input_path" placeholder="default=/hrm/setFireSensing"/><br></td>
+            </tr>
+            <tr>
+                <td><p>Requset Device Setting</p></td>
+            </tr>
+            <tr>
+                <td><label>input_device</label></td>
+                <td><input type="text" id="input_device" placeholder="default= none"/><br></td>
+            </tr>
+            <tr>
+                <td><label>input_sensor_value</label></td>
+                <td><input type="text" id="input_sensor_value" placeholder="default= none "/><br></td>
+            </tr>
+            <tr>
+                <td><label>input_time</label></td>
+                <td><input type="text" id="input_time" placeholder="default= auto"/><br></td>
+            </tr>
+        <tr>
+            <button id="btn_input_apply">
+                Input data Apply
+            </button>
+        </tr>
+    </table>
+
+</div>
+
+
+<hr>
+
+<table>
+    <tr>
+        <td>
+            <label>Now Request Target</label><br>
+            <hr>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div id="input_target"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <hr>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>Now Request Body</label><br>
+            <hr>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div id="input_body">
+            </div>
+        </td>
+    </tr>
+</table>
+
+<hr>
+<div>
+    <label>Unix Timestamp = </label>
+    <span id="timestamp"></span><br>
+    <hr>
+    <button id="btn_get">
+        (미구현)Make Sample GET Request
+    </button>
+    <br><br>
+    <button id="btn_post">
+        Make Sample POST Request
+    </button>
+
+    <script src="../ers_config.js"></script>
+    <script src="../restful_controller.js"></script>
+
+</div>
+<hr>
+<div id="response"></div>
+
+
+</body>
+</html>
