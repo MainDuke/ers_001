@@ -23,3 +23,18 @@ so, My Choose point.
 
 ---
 
+Install
+```
+my-electron-app/
+├── package.json
+├── main.js
+└── index.html
+```
+
+```
+npm init -y
+npm i --save-dev electron
+
+npx @electron-forge/cli import
+npm run make
+```
