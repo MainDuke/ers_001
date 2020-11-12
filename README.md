@@ -23,18 +23,27 @@ so, My Choose point.
 
 ---
 
-Install
+Install : https://www.electronjs.org/docs/tutorial/quick-start#package-and-distribute-the-application
 ```
-my-electron-app/
+ers_001/
 ├── package.json
 ├── main.js
-└── index.html
+└── src
+    └── ers_confing.js
+    └── restful_controller.js
+    └── view
+        └── main.html
+        └── ers_style.css
+
 ```
 
 ```
+# in project folder, install
 npm init -y
 npm i --save-dev electron
+npm start
 
+# Package and distribute the application
 npx @electron-forge/cli import
 npm run make
 ```
